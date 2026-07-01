@@ -1,4 +1,6 @@
 projects:
+environments:
+  - name: production
 services:
   - type: web
     plan: starter
