@@ -1,19 +1,18 @@
 projects:
-environments:
-  - name: production
-services:
-  - type: web
-    plan: starter
-    name: flask-hello-world
-    runtime: python
-    repo: https://github.com/adirksmeier-render/flask-hello-world
-    buildCommand: 'pip install -r requirements.txt'
-    startCommand: 'gunicorn app:app'
-    buildFilter:
-      paths:
-        - test/changed 
-
-databases:
-  - name: test_logical_replication
-    plan: pro-4gb
-    ipAllowList: []
+  - name: Test Project
+    environments:
+    - name: production
+      services:
+        - name: flask-hello-world
+          type: web
+          plan: starter
+          runtime: python       
+          buildCommand: 'pip install -r requirements.txt'
+          startCommand: 'gunicorn app:app'
+          buildFilter:
+            paths:
+              - test/changed 
+      databases:
+        - name: test_logical_replication
+        plan: pro-4gb
+        ipAllowList: []
