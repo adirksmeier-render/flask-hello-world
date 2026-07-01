@@ -13,3 +13,6 @@ services:
 databases:
   - name: test_logical_replication
     plan: pro-4gb
+    ipAllowList: # Default: allows all connections
+      - source: 24.34.81.82
+        description: lcars
