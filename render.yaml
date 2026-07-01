@@ -1,0 +1,13 @@
+services:
+  - type: web
+    plan: starter
+    name: flask-hello-world
+    runtime: python
+    repo: https://github.com/adirksmeier-render/flask-hello-world
+    buildCommand: 'pip install -r requirements.txt'
+    startCommand: 'gunicorn app:app'
+    envVars:
+
+databases:
+  - name: test_logical_replication
+    plan: pro-4gb
