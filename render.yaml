@@ -1,5 +1,5 @@
 projects:
-  - name: Test Project
+  - name: New Project
     environments:
     - name: Production
       services:
