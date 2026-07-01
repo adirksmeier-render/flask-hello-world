@@ -1,3 +1,4 @@
+projects:
 services:
   - type: web
     plan: starter
