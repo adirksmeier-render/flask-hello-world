@@ -1,7 +1,7 @@
 projects:
   - name: Test Project
     environments:
-    - name: production
+    - name: Production
       services:
         - name: flask-hello-world
           type: web
