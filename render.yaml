@@ -14,5 +14,5 @@ projects:
               - test/changed 
       databases:
         - name: test_logical_replication
-        plan: pro-4gb
-        ipAllowList: []
+          plan: pro-4gb
+          ipAllowList: []
