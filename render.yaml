@@ -15,4 +15,3 @@ projects:
       databases:
         - name: test_logical_replication
           plan: pro-4gb
-          ipAllowList: []
