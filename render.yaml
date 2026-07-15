@@ -15,3 +15,8 @@ projects:
       databases:
         - name: test_logical_replication
           plan: pro-4gb
+        - name: test_stuck_db
+          user: stuck_user
+          plan: basic-256mb
+          region: virginia
+          ipAllowList: []
