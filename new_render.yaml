@@ -20,4 +20,3 @@ projects:
           user: stuck_user
           plan: basic-256mb
           region: virginia
-          ipAllowList: []
