@@ -1,7 +1,7 @@
 previews:
   generation: manual
 projects:
-  - name: New Project
+  - name: Blueprint Project
     environments:
     - name: Production
       services:
