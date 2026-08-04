@@ -11,9 +11,7 @@ projects:
           runtime: python       
           buildCommand: 'pip install -r requirements.txt'
           startCommand: 'gunicorn app:app'
-          buildFilter:
-            paths:
-              - test/changed 
+      
       databases:
         - name: test_logical_replication
           plan: pro-4gb
