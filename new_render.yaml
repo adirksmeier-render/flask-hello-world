@@ -3,7 +3,7 @@ previews:
 projects:
   - name: New Project
     environments:
-    - name: Production
+    - name: Staging
       services:
         - name: flask-hello-world
           type: web
