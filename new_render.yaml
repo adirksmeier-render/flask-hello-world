@@ -1,3 +1,5 @@
+previews:
+  generation: manual
 projects:
   - name: New Project
     environments:
