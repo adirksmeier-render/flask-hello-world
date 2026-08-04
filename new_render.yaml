@@ -1,9 +1,5 @@
 previews:
   generation: manual
-projects:
-  - name: New Project
-    environments:
-    - name: Staging
       services:
         - name: flask-hello-world
           type: web
