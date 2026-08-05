@@ -1,5 +1,9 @@
 previews:
   generation: manual
+projects:
+  - name: Blueprint Project
+    environments:
+    - name: Staging
       services:
         - name: flask-hello-world
           type: web
