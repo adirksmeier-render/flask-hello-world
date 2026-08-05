@@ -3,4 +3,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World! The week is 7 days.'
+    return 'Hello, World! A month is long.'
