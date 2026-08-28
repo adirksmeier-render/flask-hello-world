@@ -11,6 +11,12 @@ projects:
           runtime: python       
           buildCommand: 'pip install -r requirements.txt'
           startCommand: 'gunicorn app:app'
+       - name: Test Suspended Service
+          type: web
+          plan: starter
+          runtime: python
+          buildCommand: 'pip install -r requirements.txt'
+          startCommand: 'gunicorn app:app'
       
       databases:
         - name: test_logical_replication
