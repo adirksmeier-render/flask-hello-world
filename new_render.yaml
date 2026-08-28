@@ -1,31 +1,37 @@
-previews:
-  generation: manual
 projects:
-  - name: Blueprint Project
-    environments:
-    - name: Staging
-      services:
-        - name: flask-hello-world
-          type: web
-          plan: starter
-          runtime: python       
-          buildCommand: 'pip install -r requirements.txt'
-          startCommand: 'gunicorn app:app'
-       - name: Test Suspended Service
-          type: web
-          plan: starter
-          runtime: python
-          buildCommand: 'pip install -r requirements.txt'
-          startCommand: 'gunicorn app:app'
-      
-      databases:
-        - name: test_logical_replication
-          plan: pro-4gb
-        - name: test_stuck_db
-          databaseName: stuck_db
-          user: stuck_user
-          plan: basic-256mb
-          region: virginia
-          ipAllowList: 
-            - source: 0.0.0.0/0
-              description: everywhere
+- name: Blueprint Project
+  environments:
+  - name: Staging
+    services:
+    - type: web
+      name: flask-hello-world
+      runtime: python
+      repo: https://github.com/adirksmeier-render/flask-hello-world
+      plan: starter
+      envVars:
+      - key: DUMMY_VARIABLE
+        sync: false
+      region: virginia
+      buildCommand: pip install -r requirements.txt
+      startCommand: gunicorn app:app
+      autoDeployTrigger: commit
+    - type: web
+      name: Test Suspended Service
+      runtime: python
+      repo: https://github.com/adirksmeier-render/flask-hello-world
+      plan: 0.5c-512mb
+      region: virginia
+      buildCommand: pip install -r requirements.txt
+      startCommand: gunicorn app:app
+      autoDeployTrigger: commit
+    databases:
+    - name: test_logical_replication
+      databaseName: test_logical_replication
+      user: new_dashboard_user
+      plan: pro-4gb
+      region: virginia
+      ipAllowList:
+      - source: 0.0.0.0/0
+        description: everywhere
+      postgresMajorVersion: "18"
+      diskSizeGB: 60
