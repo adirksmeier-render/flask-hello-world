@@ -10,13 +10,10 @@ projects:
       plan: starter
       envVars:
       - key: DUMMY_VARIABLE
-        value: newValueBP
+        value: newValueBP_noAddChngs
       region: virginia
       buildCommand: pip install -r requirements.txt
       startCommand: gunicorn app:app
-      buildFilter:
-        paths:
-          - random/__init__.py
       autoDeployTrigger: commit
     - type: web
       name: Test Suspended Service
