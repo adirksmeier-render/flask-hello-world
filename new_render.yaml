@@ -11,6 +11,8 @@ projects:
       envVars:
       - key: DUMMY_VARIABLE
         value: newValueBP_noAddChngs
+      - key: BLUEPRINT_VARIABLE
+        value: testingBlue
       region: virginia
       buildCommand: pip install -r requirements.txt
       startCommand: gunicorn app:app
