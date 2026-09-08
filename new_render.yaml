@@ -10,7 +10,7 @@ projects:
       plan: starter
       envVars:
       - key: DUMMY_VARIABLE
-        sync: false
+        sync: true
       region: virginia
       buildCommand: pip install -r requirements.txt
       startCommand: gunicorn app:app
