@@ -10,7 +10,7 @@ projects:
       plan: starter
       envVars:
       - key: DUMMY_VARIABLE
-        value: newValueBP_noAddChngs
+        value: newValueBP_ymlBuildFilter
       - key: BLUEPRINT_VARIABLE
         value: testingBlue_rndmChange2
       region: virginia
