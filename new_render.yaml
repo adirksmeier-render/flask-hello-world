@@ -17,15 +17,6 @@ projects:
       buildCommand: pip install -r requirements.txt
       startCommand: gunicorn app:app
       autoDeployTrigger: commit
-    - type: web
-      name: Test Suspended Service
-      runtime: python
-      repo: https://github.com/adirksmeier-render/flask-hello-world
-      plan: 0.5c-512mb
-      region: virginia
-      buildCommand: pip install -r requirements.txt
-      startCommand: gunicorn app:app
-      autoDeployTrigger: commit
     databases:
     - name: test_logical_replication
       databaseName: test_logical_replication
