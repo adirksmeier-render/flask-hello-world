@@ -10,13 +10,16 @@ projects:
       plan: starter
       envVars:
       - key: DUMMY_VARIABLE
-        value: newValueBP_ymlBuildFilter
+        value: newValueBP_ignoredPath
       - key: BLUEPRINT_VARIABLE
         value: testingBlue_rndmChange2
       region: virginia
       buildCommand: pip install -r requirements.txt
       startCommand: gunicorn app:app
       autoDeployTrigger: commit
+      buildFilter:
+        ignoredPaths:
+        - new_render.yaml
     - type: web
       name: Test Suspended Service
       runtime: python
