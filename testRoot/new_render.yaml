@@ -7,6 +7,7 @@ projects:
       name: flask-hello-world
       runtime: python
       repo: https://github.com/adirksmeier-render/flask-hello-world
+      rootDir: testRoot
       plan: starter
       envVars:
       - key: DUMMY_VARIABLE
