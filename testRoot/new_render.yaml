@@ -1,0 +1,42 @@
+projects:
+- name: Blueprint Project
+  environments:
+  - name: Staging
+    services:
+    - type: web
+      name: flask-hello-world
+      runtime: python
+      repo: https://github.com/adirksmeier-render/flask-hello-world
+      plan: starter
+      envVars:
+      - key: DUMMY_VARIABLE
+        value: newValueBP_ignoredPath
+      - key: BLUEPRINT_VARIABLE
+        value: testingBlue_rndmChange2
+      region: virginia
+      buildCommand: pip install -r requirements.txt
+      startCommand: gunicorn app:app
+      autoDeployTrigger: commit
+      buildFilter:
+        ignoredPaths:
+        - new_render.yaml
+    - type: web
+      name: Test Suspended Service
+      runtime: python
+      repo: https://github.com/adirksmeier-render/flask-hello-world
+      plan: 0.5c-512mb
+      region: virginia
+      buildCommand: pip install -r requirements.txt
+      startCommand: gunicorn app:app
+      autoDeployTrigger: commit
+    databases:
+    - name: test_logical_replication
+      databaseName: test_logical_replication
+      user: new_dashboard_user
+      plan: pro-4gb
+      region: virginia
+      ipAllowList:
+      - source: 0.0.0.0/0
+        description: everywhere
+      postgresMajorVersion: "18"
+      diskSizeGB: 60
