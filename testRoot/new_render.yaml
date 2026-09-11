@@ -20,7 +20,7 @@ projects:
       autoDeployTrigger: commit
       buildFilter:
         ignoredPaths:
-        - new_render.yaml
+        - testRoot/new_render.yaml
     - type: web
       name: Test Suspended Service
       runtime: python
