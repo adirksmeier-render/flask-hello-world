@@ -1,4 +1,4 @@
-#This is a blueprint
+#This is a blueprint comment
 projects:
 - name: Blueprint Project
   environments:
