@@ -10,4 +10,4 @@ Follow the guide at https://render.com/docs/deploy-flask.
 
 ## Testing section
 
-A new section exists now.
+A new section exists now. This is an easy way to test a simple auto-deploy.
