@@ -17,7 +17,7 @@ projects:
         value: testingBlue_rndmChange2
       region: virginia
       buildCommand: pip install -r requirements.txt
-      startCommand: gunicorn app:app
+      startCommand: gunicor app:app
       autoDeployTrigger: commit
       buildFilter:
         ignoredPaths:
